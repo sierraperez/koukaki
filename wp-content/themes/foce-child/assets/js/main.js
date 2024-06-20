@@ -63,4 +63,47 @@ jQuery(document).ready(function($){
 
 });
 
+// //  Animations Video and Titre Top and Down 
+// const target = document.querySelectorAll('[data-anime]');
+// const animationClass ='animate';
 
+// function animeImage(){
+//   const windowTop = window.pageYOffset;
+//   console.log(windowTop);
+
+// }
+// window.addEventListener('scroll',function(){
+//   animeImage();
+// })
+
+
+//  Animations Video and Titre Top and Down 
+const target = document.querySelectorAll('[data-anime]');
+const animationClass = 'animate';
+
+function animeImage() {
+    // Para cada elemento que tem o atributo 'data-anime'
+    target.forEach(function(element) {
+        // Adiciona a classe de animação
+        element.classList.add(animationClass);
+    });
+}
+
+window.addEventListener('load', function() {
+    animeImage();
+});
+
+ // Seleciona a imagem
+ const img = document.getElementById('bouncingImage');
+
+ // Função para adicionar a classe de animação com um atraso
+ function startBounceAnimation() {
+     // Adiciona a classe 'bounce' à imagem
+     img.classList.add('circular');
+ }
+
+ // Adiciona o evento 'load' ao window
+ window.addEventListener('load', function() {
+     // Define um atraso de 2 segundos (500 milissegundos)
+     setTimeout(startBounceAnimation, 500); // 2000 ms = 2 segundos
+ });

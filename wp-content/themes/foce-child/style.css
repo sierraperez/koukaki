@@ -12,6 +12,7 @@
     position: relative;
     object-fit: contain;
     height: 800px;
+    opacity: 0;
 }
 .banner img {
     margin-top: -10%;
@@ -52,6 +53,7 @@
 .nuages{
   position: relative;
   left: 700px;
+  top: 30px;
 }
 /* .swiper-container{
   width: 100%;
@@ -81,7 +83,7 @@
 } */
 
 
-/* Definição das animações de fade-in e movimento */
+/* Definição das animações de fade-in e movimento
 @keyframes fadeInFromTop {
   from {
     opacity: 0;
@@ -105,7 +107,7 @@
 }
 
 /* Aplica as animações à primeira seção */
-.site-main > section:first-of-type {
+/* .site-main > section:first-of-type {
   position: relative;
 }
 
@@ -119,9 +121,9 @@
   opacity: 0;
   animation: fadeInFromBottom 2s forwards;
   will-change: transform, opacity;
-}
+}  */
 
-
+/* ANIMATION */
 
 .story__article::after , #studio h2::after,#studio h2::before ,.site-footer::after ,.story h2::after,.site-footer::before,.site-footer ul::after{ /* flowers  rotation */
     animation: rotation 15s linear infinite;
@@ -164,3 +166,49 @@
     animation: cloudMoveReverse 4s forwards;
     position: absolute;
   }
+
+  [data-anime]{
+    opacity: 0;
+    transition: 0.3s;
+  }
+  [data-anime="Retard"]{
+    transition: 1.0s;
+
+  }
+
+  [data-anime="Top"]{
+    transform : translate3d(0px,-115px,0px);
+
+  }
+
+  [data-anime="Down"]{
+    transform : translate3d(0px,100px,0px);
+
+
+  }
+  [data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px,0px);
+  }
+
+  @keyframes circular {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate3d(50px, 0, 20px);
+    }
+    50% {
+        transform: translate3d(50px, 50px, 40px);
+    }
+    75% {
+        transform: translate3d(0, 50px, 20px);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.circular {
+    animation: circular 2s infinite;
+}
