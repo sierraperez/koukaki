@@ -9,8 +9,8 @@
             $characters_query = new WP_Query($args);
             ?>
             <article id="characters">
-                <div class="main-character">    
-                    <h3>Les personnages</h3>
+                <div class="main-character ">    
+                    <h3 class="animation-titres from-down"> <span class="animation-part1" >Les </span> <span class="animation-part2">personnages </span></h3>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <?php

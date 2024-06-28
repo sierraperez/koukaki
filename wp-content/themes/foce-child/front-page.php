@@ -11,14 +11,16 @@ get_header();
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>  "alt="logo Fleurs d'oranger & chats errants" data-anime="Down" id="bouncingImage">
         </section>
         <section id="story" class="story" data-fideIn="Down" >
-            <h2 class="story_titre">L'histoire</h2>
-            <article id="" class="story__article">
-                <p><?php echo get_theme_mod('story'); ?></p>
-            </article>
+            <div class="animation-titres from-down story-container" >
+                <h2  > <span class="animation-titres from-down">  <span class="animation-part1" >L'</span> <span class="animation-part2">histoire</span></span></h2>
+                <article id="" class="story__article ">
+                    <p><?php echo get_theme_mod('story'); ?></p>
+                </article>
+            </div>
             <?php get_template_part( 'parts/characters' );?>
             <article id="place"  >
                 <div>
-                    <h3>Le Lieu</h3>
+                    <h3 class="animation-titres from-down"> <span class="animation-part1" >Le </span> <span class="animation-part2">Lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
                 <div id="nuage" class="cloud" >
@@ -30,14 +32,14 @@ get_header();
 
 
         <section id="studio">
-            <h2>Studio Koukaki</h2>
+            <h2 class="animation-titres from-down"> <span class="animation-part1" >Studio  </span> <span class="animation-part2">Koukaki</span></h2>
             <div>
                 <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
                 <p>Avec une créativité et une capacité d’innovation mondialement reconnues, une expertise éditoriale et commerciale à la pointe de son industrie, le Studio Koukaki se positionne comme un acteur incontournable dans un marché en forte croissance. Koukaki construit chaque année de véritables succès et capitalise sur de puissantes marques historiques. Cette année, il vous présente “Fleurs d’oranger et chats errants”.</p>
             </div>
         </section>
         <section id="oscar">
-            <h3>Fleurs d’oranger & chats errants est nominé aux Oscars Short Film Animated de 2022 !</h3>
+            <h3 class="animation-titres from-down"> <span class="animation-part1" >Fleurs d’oranger & chats errants est</span> <span class="animation-part2">nominé aux Oscars Short Film Animated de 2022 !</span></h3>
             <img src="<?php echo home_url('/wp-content/uploads/2024/06/18-courts-metrages-francais-d-animation-eligibles-aux-oscars-2021-2.png');?> " alt=" Oscar LOGO">   
         </section>
     </main><!-- #main -->

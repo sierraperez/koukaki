@@ -5,9 +5,9 @@ jQuery(document).ready(function($){
     centeredSlides: true,
     slidesPerView: "auto",
     loop: true, // Adiciona o loop
-    // autoplay: {
-    //   delay : 2500 ,
-    // },
+    autoplay: {
+      delay : 2500 ,
+    },
     coverflowEffect: {
       rotate: 50,
       stretch: 0,
@@ -61,6 +61,9 @@ jQuery(document).ready(function($){
   animateCloudsOnScroll();
 
 
+  $(".menu-toggle").style.display = "block";
+  console.log ($(".menu-toggle"))
+
 });
 
 // //  Animations Video and Titre Top and Down 
@@ -107,3 +110,16 @@ window.addEventListener('load', function() {
      // Define um atraso de 2 segundos (700 milissegundos)
      setTimeout(startBounceAnimation, 700); // 700 ms = 0.7 segundos
  });
+
+
+const intersectObserver =  new IntersectionObserver((entries)=> {
+  entries.forEach((entry) =>{
+    console.log(entry)
+    entry.target.classList.toggle("show" , entry.isIntersecting)
+  })
+
+})
+
+const elements = document.querySelectorAll(".animation-titres , .animation-part1 , .animation-part2")
+
+elements.forEach ( el => intersectObserver.observe(el))
