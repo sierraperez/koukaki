@@ -10,8 +10,8 @@ get_header();
             </video>
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>  "alt="logo Fleurs d'oranger & chats errants" data-anime="Down" id="bouncingImage">
         </section>
-        <section id="#story" class="story" >
-            <h2>L'histoire</h2>
+        <section id="story" class="story" data-fideIn="Down" >
+            <h2 class="story_titre">L'histoire</h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>

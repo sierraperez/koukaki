@@ -104,6 +104,6 @@ window.addEventListener('load', function() {
 
  // Adiciona o evento 'load' ao window
  window.addEventListener('load', function() {
-     // Define um atraso de 2 segundos (500 milissegundos)
-     setTimeout(startBounceAnimation, 500); // 2000 ms = 2 segundos
+     // Define um atraso de 2 segundos (700 milissegundos)
+     setTimeout(startBounceAnimation, 700); // 700 ms = 0.7 segundos
  });
