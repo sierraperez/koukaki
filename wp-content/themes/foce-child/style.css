@@ -171,11 +171,11 @@
   }
   .cloud-animation {
     position: absolute;
-    animation: cloudMove 2s forwards;
+    animation: cloudMove 0.5s forwards;
   }
   
   .cloud-animation-reverse {
-    animation: cloudMoveReverse 4s forwards;
+    animation: cloudMoveReverse 1.5s forwards;
     position: absolute;
   }
 
