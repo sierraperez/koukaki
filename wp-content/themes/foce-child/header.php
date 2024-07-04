@@ -26,20 +26,21 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-            <!-- <ul>
-                <li><a href="#story">Histoire</a></li>
-                <li><a href="#characters">Personnages</a></li>
-                <li class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-                <li><a href="#place">Lieu</a></li>
-                <li><a href="#studio">Studio Koukaki</a></li>
-            </ul> -->
-
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+            <nav id="site-navigation" class="main-navigation">
+                <div class="site-title" id="site-title-homepage">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+                </div>
+                <div class="menu-burger">
+                    <div class="icone_menu-burger" id="icone_menu-burger">
+                        <div class="trait1"></div>
+                        <div class="trait2"></div>
+                        <div class="trait3"></div>
+                    </div>
+                </div>
+            </nav>
+            <div class="menu_ouvert">
+                <?php
+                get_template_part('parts/menu');
+                ?>
+            </div>
+        </header><!-- #masthead -->

@@ -1,4 +1,48 @@
 jQuery(document).ready(function($){
+ /*MENU BURGER*/
+  // Icone menu burger
+
+  const icone_menuBurger = document.querySelector(".icone_menu-burger");
+  const trait1 = document.querySelector(".trait1");
+  const trait2 = document.querySelector(".trait2");
+  const trait3 = document.querySelector(".trait3");
+
+  icone_menuBurger.addEventListener("click", function () {
+    icone_menuBurger.classList.toggle("crossed");
+    if (icone_menuBurger.classList.contains("crossed")) {
+      trait1.style.transform = "rotate(45deg) translate(5px, 5px)";
+      trait2.style.opacity = "0";
+      trait3.style.transform = "rotate(-45deg) translate(5px, -5px)";
+    } else {
+      trait1.style.transform = "none";
+      trait2.style.opacity = "1";
+      trait3.style.transform = "none";
+    }
+  });
+
+  // ouverture-fermeture menu-burger
+
+  
+  document.querySelector(".menu-burger").addEventListener("click", openCloseMenu);
+  document.querySelectorAll(".menu_ouvert_link").forEach((link)=> {
+    link.addEventListener("click", openCloseMenu);
+  });
+  function openCloseMenu(){ console.log("click");
+    const menuOuvert = document.querySelector(".menu_ouvert");
+    if (menuOuvert.style.display === "flex") {
+      menuOuvert.style.opacity = "0"; // Réinitialiser l'opacité à 0
+      setTimeout(() => {
+        menuOuvert.style.display = "none"; // Masquer le menu_ouvert après le fade-out
+      }, 300); // Délai pour la transition de fade-out
+    } else {
+      menuOuvert.style.display = "flex"; // Afficher le menu_ouvert
+      setTimeout(() => {
+        menuOuvert.style.opacity = "1"; // Ajouter l'opacité à 1 pour le fade-in
+      }, 10); // Délai pour déclencher la transition
+    }
+  }
+
+
   var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
